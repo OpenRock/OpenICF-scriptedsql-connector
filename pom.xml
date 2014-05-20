@@ -27,19 +27,19 @@
     <parent>
         <groupId>org.forgerock.openicf.connectors</groupId>
         <artifactId>connectors-parent</artifactId>
-        <version>1.1.1.0</version>
+        <version>1.1.2.0</version>
     </parent>
     <groupId>org.forgerock.openicf.connectors</groupId>
     <artifactId>scriptedsql-connector</artifactId>
-    <version>1.1.2.0-SNAPSHOT</version>
+    <version>1.1.1.0-RC1</version>
     <packaging>bundle</packaging>
     <name>Scripted SQL Connector</name>
     <description>A Database connector that uses Groovy scripts to perform actions</description>
     <url>http://openicf.forgerock.org/connectors/scriptedsql-connector</url>
     <scm>
-        <connection>scm:svn:https://svn.forgerock.org/openicf/trunk/connectors/java/scriptedsql</connection>
-        <developerConnection>scm:svn:https://svn.forgerock.org/openicf/trunk/connectors/java/scriptedsql</developerConnection>
-        <url>http://sources.forgerock.org/browse/openicf/trunk/connectors/java/scriptedsql</url>
+        <connection>scm:svn:https://svn.forgerock.org/openicf/branches/openicf-scriptedsql-connector-1.1.1.x</connection>
+        <developerConnection>scm:svn:https://svn.forgerock.org/openicf/branches/openicf-scriptedsql-connector-1.1.1.x</developerConnection>
+        <url>http://sources.forgerock.org/browse/openicf/branches/openicf-scriptedsql-connector-1.1.1.x</url>
     </scm>
     <issueManagement>
         <system>jira</system>
@@ -85,7 +85,7 @@
         <dependency>
             <groupId>org.forgerock.openicf.misc</groupId>
             <artifactId>scriptedcommon</artifactId>
-            <version>1.1.0.1-SNAPSHOT</version>
+            <version>1.1.0.1-RC1</version>
         </dependency>
     </dependencies>
     <build>
@@ -119,7 +119,7 @@
                     <dependency>
                         <groupId>org.forgerock.openicf.misc</groupId>
                         <artifactId>scriptedcommon</artifactId>
-                        <version>1.1.0.0</version>
+                        <version>1.1.0.1-RC1</version>
                     </dependency>
                     <dependency>
                         <groupId>mysql</groupId>
