@@ -89,6 +89,59 @@
         </dependency>
     </dependencies>
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.forgerock.commons</groupId>
+                    <artifactId>forgerock-doc-maven-plugin</artifactId>
+                    <version>2.1.0</version>
+                    <configuration>
+                        <useGeneratedSources>true</useGeneratedSources>
+                        <projectVersion>${project.version}</projectVersion>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>copy-common</id>
+                            <phase>pre-site</phase>
+                            <goals>
+                                <goal>boilerplate</goal>
+                            </goals>
+                            <configuration>
+                                <useGeneratedSources>true</useGeneratedSources>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>filter-sources</id>
+                            <phase>pre-site</phase>
+                            <goals>
+                                <goal>filter</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>prepare-sources</id>
+                            <phase>pre-site</phase>
+                            <goals>
+                                <goal>prepare</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>build-doc</id>
+                            <phase>pre-site</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>layout-doc</id>
+                            <phase>site</phase>
+                            <goals>
+                                <goal>layout</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.felix</groupId>
